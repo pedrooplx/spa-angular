@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { ServicoService } from '../servico.service';
 
 @NgModule({
   declarations: [
@@ -13,6 +12,7 @@ import { CommonModule } from '@angular/common';
   ],
   providers: [
     // serviços
+    ServicoService
   ]
 })
 export class FuncionalidadeModule { }
