@@ -3,16 +3,16 @@
    
         <div *ngFor="let produto of produtos" class="col-md-4" style="padding-bottom: 30px;">
             <div class="card h-100">
-                <a class="text-decoration-none">
+                <a class="text-decoration-none" [routerLink]="['/produto-detalhe',produto.id]">
                     <div style="align-content:center;">
-                        <img src="/assets/imagem" height="164px" width="253px" alt="">
+                        <img src="/assets/{{produto.imagem}}" height="164px" width="253px" alt="">
                     </div>
                 </a>
 
                 <div class="card-body">
-                    <h4 class="card-title">Nome Produto</h4>
+                    <h4 class="card-title">{{produto.nome}}</h4>
                     <p>Por apenas:</p>
-                    <div><h4>5000</h4></div>
+                    <div><h4>R$ {{produto.valor}}</h4></div>
                 </div>
 
                 <div class="card-footer">
