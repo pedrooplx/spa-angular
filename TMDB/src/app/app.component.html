@@ -1,46 +1,81 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarTogglerDemo01"
-      aria-controls="navbarTogglerDemo01"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" href="#">Hidden brand</a>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
-            >Disabled</a
-          >
-        </li>
-      </ul>
-      <form class="d-flex input-group w-auto">
-        <input
-          type="search"
-          class="form-control"
-          placeholder="Type query"
-          aria-label="Search"
-        />
-        <button
-          class="btn btn-outline-primary"
-          type="button"
-          data-mdb-ripple-color="dark"
-        >
-          Search
-        </button>
-      </form>
+<!-- Navbar -->
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center mb-2 mt-2">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg"
+            width="60" height="60" class="d-inline-block align-top">
+        </a>
+      </div>
     </div>
   </div>
-</nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse justify-content-md-center">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">TV - Séries</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown" data-bs-toggle="dropdown"
+              aria-expanded="false">Gêneros</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown">
+              <li><a class="dropdown-item" href="#">1</a></li>
+              <li><a class="dropdown-item" href="#">2</a></li>
+              <li><a class="dropdown-item" href="#">3</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">A-Z Lista</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</section>
+<!-- Navbar -->
+
+<!-- Content -->
+<div class="bg-light py-5">
+  <div class="container py-5">
+    <div class="row mb-4">
+      <div class="col-lg-5">
+        <h2 class="display-4 font-weight-light">Nossa biblioteca</h2>
+        <p class="font-italic text-muted">Veja alguns de nossos títulos disponíveis</p>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-xl-3 col-sm-6 mb-5">
+        <div class="card movie_card">
+          <img src="https://www.joblo.com/assets/images/joblo/posters/2019/02/Dyow9RgX4AElAGN.jpg" class="card-img-top"/>
+          <div class="card-body">
+            <a href="#">
+              <i class="fa fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Assistir"></i>
+            </a>
+            <h5 class="card-title">Toy Story 4</h5>
+            <span class="movie_info float-left">2019</span>
+            <span class="movie_info star_float"><i class="fa fa-star"></i> 9 / 10</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Content -->
+
+<!-- Footer -->
+<footer class="bg-dark text-center text-white">
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <small>©</small> 2020 Copyright
+    <a class="text-white" href="#">TMDB</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
