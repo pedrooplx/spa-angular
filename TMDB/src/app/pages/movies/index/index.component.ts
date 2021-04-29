@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-index',
+  selector: 'app-movies-index',
   templateUrl: './index.component.html'
 })
 export class IndexComponent implements OnInit {

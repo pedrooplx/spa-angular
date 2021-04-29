@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { IndexComponent } from './pages/movies/index/index.component';
+import { MovieCardComponent } from './shared/movies/movie-card/movie-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    IndexComponent
+    IndexComponent,
+    MovieCardComponent
   ],
   imports: [
     BrowserModule,
