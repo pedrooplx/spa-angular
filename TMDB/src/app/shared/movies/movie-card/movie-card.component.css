@@ -40,6 +40,12 @@ img {
     padding-left: 95px;
 }
 
+.star-average{
+    color: #fac301;
+    text-shadow: -1px 0 #5e5c5c, 0 1px #5e5c5c, 1px 0 #5e5c5c, 0 -1px #5e5c5c;
+
+}
+
 .play_button{
     background-image: linear-gradient(to bottom right, #8ecea2 , #04b4e3);
     position: absolute;

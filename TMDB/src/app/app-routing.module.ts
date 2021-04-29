@@ -1,9 +1,9 @@
 import { RouterModule, Routes } from '@angular/router';
-import { IndexComponent } from './pages/movies/index/index.component';
+import { MoviesHomeComponent } from './pages/movies/movies-home/movies-home.component';
 
 const routes: Routes = [
-  { path: '', component: IndexComponent, pathMatch: 'full' },
-  { path:'home', component: IndexComponent }
+  { path: '', component: MoviesHomeComponent, pathMatch: 'full' },
+  { path:'home', component: MoviesHomeComponent }
 ];
 
 export const Routers = RouterModule.forRoot(routes);
