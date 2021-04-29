@@ -6,8 +6,8 @@
                 <p class="font-italic text-muted">Veja alguns de nossos títulos mais votados!</p>
             </div>
         </div>
-        <div class="row text-center">
-            <app-movie-card></app-movie-card>
+        <div class="row text-center">          
+            <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
         </div>
     </div>
 </div>

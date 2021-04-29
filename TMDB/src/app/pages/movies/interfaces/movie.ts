@@ -25,3 +25,7 @@ interface Language{
     iso_639_1: string;
     name: string;
 }
+
+export interface MoviesResponse{
+    results: Movie[]
+} 

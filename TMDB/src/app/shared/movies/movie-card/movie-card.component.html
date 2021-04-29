@@ -1,13 +1,13 @@
 <div class="col-xl-3 col-sm-6 mb-5">
     <div class="card movie_card">
-      <img src="https://www.joblo.com/assets/images/joblo/posters/2019/02/Dyow9RgX4AElAGN.jpg" class="card-img-top"/>
+      <img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" class="card-img-top"/>
       <div class="card-body">
         <a href="#">
           <i class="fa fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Assistir"></i>
         </a>
-        <h5 class="card-title">Toy Story 4</h5>
-        <span class="movie_info float-left">2019</span>
-        <span class="movie_info star_float"><i class="fa fa-star star-average"></i> 9 / 10</span>
+        <h5 class="card-title">{{movie.title}}</h5>
+        <span class="movie_info float-left">{{movie.release_date | date:'YYYY'}}</span>
+        <span class="movie_info star_float"><i class="fa fa-star star-average"></i> {{movie.vote_average}} / 10</span>
       </div>
     </div>
   </div>

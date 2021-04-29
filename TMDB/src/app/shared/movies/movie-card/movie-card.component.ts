@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Movie } from 'src/app/pages/movies/interfaces/movie';
 
 @Component({
   selector: 'app-movie-card',
@@ -9,7 +10,9 @@ export class MovieCardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  @Input() movie!: Movie;
 
+  ngOnInit(): void {
+
+  }
 }
