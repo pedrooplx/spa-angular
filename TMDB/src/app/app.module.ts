@@ -9,6 +9,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { MovieCardComponent } from './shared/movies/movie-card/movie-card.component';
 import { MoviesHomeComponent } from './pages/movies/movies-home/movies-home.component';
 import { MoviesHomeService } from './pages/movies/movies-home/movies-home.service';
+import { Err404Component } from './shared/errors/err404/err404.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MoviesHomeService } from './pages/movies/movies-home/movies-home.servic
     FooterComponent,
     MoviesHomeComponent,
     MovieCardComponent,
-    MoviesHomeComponent
+    MoviesHomeComponent,
+    Err404Component
   ],
   imports: [
     BrowserModule,

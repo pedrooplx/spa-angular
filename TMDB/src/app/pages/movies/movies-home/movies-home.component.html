@@ -7,7 +7,7 @@
             </div>
         </div>
         <div class="row text-center">          
-            <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
+            <app-movie-card *ngFor="let movie of movies | slice:0:8" [movie]="movie"></app-movie-card>
         </div>
     </div>
 </div>
