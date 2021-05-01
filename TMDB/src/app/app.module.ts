@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import { Routers } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,8 @@ import { MovieCardComponent } from './shared/movies/movie-card/movie-card.compon
 import { MoviesHomeComponent } from './pages/movies/movies-home/movies-home.component';
 import { MoviesHomeService } from './pages/movies/movies-home/movies-home.service';
 import { Err404Component } from './shared/errors/err404/err404.component';
+import { CarouselComponent } from './pages/movies/movies-home/carousel/carousel.component';
+
 
 @NgModule({
   declarations: [
@@ -19,12 +22,14 @@ import { Err404Component } from './shared/errors/err404/err404.component';
     MoviesHomeComponent,
     MovieCardComponent,
     MoviesHomeComponent,
-    Err404Component
+    Err404Component,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
     Routers,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule.forRoot()
   ],
   providers: [
     MoviesHomeService
