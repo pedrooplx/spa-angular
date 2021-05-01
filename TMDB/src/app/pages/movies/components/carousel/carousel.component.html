@@ -1,23 +1,9 @@
   <carousel>
-    <slide>
-      <img src="https://image.tmdb.org/t/p/original//rr7E0NoGKxvbkb89eR1GwfoYjpA.jpg" alt="first slide" style="display: block; width: 100%;">
+    <slide *ngFor="let movie of movies | slice:0:3">
+      <img src="https://image.tmdb.org/t/p/original//{{movie.backdrop_path}}" alt="{{movie.title}}" style="display: block; width: 100%;">
       <div class="carousel-caption d-none d-md-block">
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </div>
-    </slide>
-    <slide>
-      <img src="https://image.tmdb.org/t/p/original//xMZJwdGMDEQWKavwMWB4Lpkuixg.jpg" alt="second slide" style="display: block; width: 100%;">
-      <div class="carousel-caption d-none d-md-block">
-        <h3>Second slide label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </slide>
-    <slide>
-      <img src="https://image.tmdb.org/t/p/original//pnwI95K4pmYeM3LsMRTQYzvhvvO.jpg" alt="third slide" style="display: block; width: 100%;">
-      <div class="carousel-caption d-none d-md-block">
-        <h3>Third slide label</h3>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        <h3>{{movie.title}}</h3>
+        <p>{{movie.overview}}</p>
       </div>
     </slide>
   </carousel>

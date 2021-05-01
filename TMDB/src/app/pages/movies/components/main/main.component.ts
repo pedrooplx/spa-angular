@@ -16,11 +16,7 @@ export class MainComponent implements OnInit {
 
     this.moviesHomeService
       .GetTopRatedMovies()
-      .subscribe(moviesList => {
-        this.movies = moviesList.results;
-        console.log(moviesList);
-        console.log(moviesList.results);
-      },
+      .subscribe(moviesList => this.movies = moviesList.results,
       err => console.log(err)
       );
   }

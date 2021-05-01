@@ -13,4 +13,9 @@ export class MoviesService {
     GetTopRatedMovies() : Observable<MoviesResponse>{
         return this.http.get<MoviesResponse>(`${Constants.baseUri}movie/top_rated?api_key=${Constants.api_key}`);
     }
+
+    GetLastestPopularMovies() : Observable<MoviesResponse>{
+        return this.http.get<MoviesResponse>(`${Constants.baseUri}movie/popular?api_key=${Constants.api_key}`);
+        // .pipe(map(x => x.slice(0, 3)));
+    }
 }
