@@ -1,10 +1,10 @@
 import { RouterModule, Routes } from '@angular/router';
-import { MoviesHomeComponent } from './pages/movies/movies-home/movies-home.component';
-import { Err404Component } from './shared/errors/err404/err404.component';
+import { MainComponent } from './pages/movies/components/main/main.component';
+import { Err404Component } from './pages/shared/errors/err404/err404.component';
 
 const routes: Routes = [
-  { path: '', component: MoviesHomeComponent, pathMatch: 'full' },
-  { path:'home', component: MoviesHomeComponent },
+  { path: '', component: MainComponent, pathMatch: 'full' },
+  { path:'home', component: MainComponent },
   { path: '404', component: Err404Component },
   { path: '**', redirectTo: '/404' }
 ];

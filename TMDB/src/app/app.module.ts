@@ -5,13 +5,13 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import { Routers } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import { MovieCardComponent } from './shared/movies/movie-card/movie-card.component';
-import { MoviesHomeComponent } from './pages/movies/movies-home/movies-home.component';
-import { MoviesHomeService } from './pages/movies/movies-home/movies-home.service';
-import { Err404Component } from './shared/errors/err404/err404.component';
-import { CarouselComponent } from './pages/movies/movies-home/carousel/carousel.component';
+import { HeaderComponent } from './pages/shared/header/header.component';
+import { FooterComponent } from './pages/shared/footer/footer.component';
+import { MainComponent } from './pages/movies/components/main/main.component';
+import { CarouselComponent } from './pages/movies/components/carousel/carousel.component';
+import { MovieCardComponent } from './pages/movies/components/movie-card/movie-card.component';
+import { Err404Component } from './pages/shared/errors/err404/err404.component';
+import { MoviesService } from './pages/movies/services/movies.service';
 
 
 @NgModule({
@@ -19,9 +19,8 @@ import { CarouselComponent } from './pages/movies/movies-home/carousel/carousel.
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    MoviesHomeComponent,
     MovieCardComponent,
-    MoviesHomeComponent,
+    MainComponent,
     Err404Component,
     CarouselComponent
   ],
@@ -32,7 +31,7 @@ import { CarouselComponent } from './pages/movies/movies-home/carousel/carousel.
     CarouselModule.forRoot()
   ],
   providers: [
-    MoviesHomeService
+    MoviesService
   ],
   bootstrap: [AppComponent]
 })

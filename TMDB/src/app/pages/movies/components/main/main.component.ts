@@ -1,14 +1,14 @@
-import { Movie } from './../interfaces/movie';
 import { Component, OnInit } from '@angular/core';
-import { MoviesHomeService } from './movies-home.service';
+import { Movie } from '../../interfaces/movie';
+import { MoviesService } from '../../services/movies.service';
 
 @Component({
   selector: 'app-movies-home',
-  templateUrl: './movies-home.component.html'
+  templateUrl: './main.component.html'
 })
-export class MoviesHomeComponent implements OnInit {
+export class MainComponent implements OnInit {
 
-  constructor(private moviesHomeService: MoviesHomeService) { }
+  constructor(private moviesHomeService: MoviesService) { }
 
   public movies!: Movie[];
 
