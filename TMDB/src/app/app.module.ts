@@ -12,6 +12,7 @@ import { CarouselComponent } from './pages/movies/components/carousel/carousel.c
 import { MovieCardComponent } from './pages/movies/components/movie-card/movie-card.component';
 import { Err404Component } from './pages/shared/errors/err404/err404.component';
 import { MoviesService } from './pages/movies/services/movies.service';
+import { MovieDetailsComponent } from './pages/movies/components/movie-details/movie-details.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MoviesService } from './pages/movies/services/movies.service';
     MovieCardComponent,
     MainComponent,
     Err404Component,
-    CarouselComponent
+    CarouselComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,

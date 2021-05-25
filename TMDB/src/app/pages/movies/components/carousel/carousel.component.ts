@@ -24,6 +24,6 @@ export class CarouselComponent implements OnInit {
       },
       err => console.log(err)
       );
-
   }
+
 }

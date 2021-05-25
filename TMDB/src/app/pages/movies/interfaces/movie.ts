@@ -29,3 +29,6 @@ interface Language{
 export interface MoviesResponse{
     results: Movie[]
 } 
+export interface MovieResponse{
+    results: Movie
+} 
