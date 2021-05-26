@@ -13,6 +13,8 @@ import { MovieCardComponent } from './pages/movies/components/movie-card/movie-c
 import { Err404Component } from './pages/shared/errors/err404/err404.component';
 import { MoviesService } from './pages/movies/services/movies.service';
 import { MovieDetailsComponent } from './pages/movies/components/movie-details/movie-details.component';
+import { ToastComponent } from './pages/shared/toast/toast.component';
+import { ToastService } from './pages/shared/toast/toast.service';
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { MovieDetailsComponent } from './pages/movies/components/movie-details/m
     MainComponent,
     Err404Component,
     CarouselComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    ToastComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { MovieDetailsComponent } from './pages/movies/components/movie-details/m
     CarouselModule.forRoot()
   ],
   providers: [
-    MoviesService
+    MoviesService,
+    ToastComponent
   ],
   bootstrap: [AppComponent]
 })

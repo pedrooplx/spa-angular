@@ -2,6 +2,7 @@ import { Movie } from 'src/app/pages/movies/interfaces/movie';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MoviesService } from '../../services/movies.service';
+import { ToastService } from 'src/app/pages/shared/toast/toast.service';
 
 @Component({
   selector: 'app-movie-details',
@@ -13,7 +14,11 @@ export class MovieDetailsComponent implements OnInit {
   public movie!: Movie;
   private movieId = Number(this.route.snapshot.paramMap.get('id'));
 
-  constructor(private route: ActivatedRoute, private moviesService: MoviesService) { }
+  constructor(
+    private route: ActivatedRoute, 
+    private moviesService: MoviesService,
+    private toast: ToastService
+    ) { }
 
   ngOnInit(): void { 
 
@@ -23,7 +28,7 @@ export class MovieDetailsComponent implements OnInit {
         this.movie = res;
         console.log(this.movie);
       },
-      err => console.log(err)
+      err => this.toast.warning({mensagem: err.error.status_message})
       );
   }
 
