@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: '', component: MainComponent, pathMatch: 'full' },
   { path:'home', component: MainComponent },
   { path: '404', component: Err404Component },
-  { path: 'details/:id', component: MovieDetailsComponent },
+  { path: 'movie/:id', component: MovieDetailsComponent },
   { path: '**', redirectTo: '/404' }
 ];
 

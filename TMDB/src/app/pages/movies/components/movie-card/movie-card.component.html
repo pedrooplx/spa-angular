@@ -2,7 +2,7 @@
     <div class="card movie_card">
       <img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" class="card-img-top"/>
       <div class="card-body">
-        <a href="#">
+        <a [routerLink]="['/movie/', movie.id]">
           <i class="fa fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Assistir"></i>
         </a>
         <h5 class="card-title">{{movie.title}}</h5>

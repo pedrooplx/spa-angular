@@ -4,7 +4,7 @@ export interface Movie{
     backdrop_path: string;
     budget: number;
     homepage: string;
-    genre: Genre[];
+    genres: Genre[];
     overview: string;
     popularity: number;
     poster_path: string;
@@ -16,7 +16,7 @@ export interface Movie{
     vote_count: number;
 }
 
-interface Genre{
+export interface Genre{
     id: number;
     name: string;
 }

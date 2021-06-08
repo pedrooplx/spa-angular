@@ -15,6 +15,7 @@ import { MoviesService } from './pages/movies/services/movies.service';
 import { MovieDetailsComponent } from './pages/movies/components/movie-details/movie-details.component';
 import { ToastComponent } from './pages/shared/toast/toast.component';
 import { ToastService } from './pages/shared/toast/toast.service';
+import { VoteAverageCircleComponent } from './pages/movies/components/vote-average-circle/vote-average-circle.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ToastService } from './pages/shared/toast/toast.service';
     Err404Component,
     CarouselComponent,
     MovieDetailsComponent,
-    ToastComponent
+    ToastComponent,
+    VoteAverageCircleComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { Genre } from './../../interfaces/movie';
 import { Movie } from 'src/app/pages/movies/interfaces/movie';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -7,7 +8,7 @@ import { ToastService } from 'src/app/pages/shared/toast/toast.service';
 @Component({
   selector: 'app-movie-details',
   templateUrl: './movie-details.component.html',
-  styleUrls: ['./movie-details.component.css']
+  styleUrls: ['./movie-details.component.scss']
 })
 export class MovieDetailsComponent implements OnInit {
 
@@ -30,6 +31,10 @@ export class MovieDetailsComponent implements OnInit {
       },
       err => this.toast.warning({mensagem: err.error.status_message})
       );
+  }
+
+  printGenresName(genre: Genre[]): string {
+    return Array.prototype.map.call(genre, item => item.name).join(", ");
   }
 
 }
