@@ -16,12 +16,12 @@ export class MovieDetailsComponent implements OnInit {
   private movieId = Number(this.route.snapshot.paramMap.get('id'));
 
   constructor(
-    private route: ActivatedRoute, 
+    private route: ActivatedRoute,
     private moviesService: MoviesService,
     private toast: ToastService
-    ) { }
+  ) { }
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
 
     this.moviesService
       .GetMovieById(this.movieId)
@@ -29,7 +29,7 @@ export class MovieDetailsComponent implements OnInit {
         this.movie = res;
         console.log(this.movie);
       },
-      err => this.toast.warning({mensagem: err.error.status_message})
+        err => this.toast.warning({ mensagem: err.error.status_message })
       );
   }
 
@@ -37,4 +37,8 @@ export class MovieDetailsComponent implements OnInit {
     return Array.prototype.map.call(genre, item => item.name).join(", ");
   }
 
+  getMovieAverage(): any {
+    var reg = new RegExp('^[0-9]+$');
+    return {'width': reg.exec((this.movie.vote_average * 10).toString())?.input + '%'};
+  }
 }
