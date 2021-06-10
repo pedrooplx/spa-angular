@@ -41,4 +41,8 @@ export class MovieDetailsComponent implements OnInit {
     var reg = new RegExp('^[0-9]+$');
     return {'width': reg.exec((this.movie.vote_average * 10).toString())?.input + '%'};
   }
+
+  getFormattedPrice(price: number) {
+    return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(price);
+}
 }
